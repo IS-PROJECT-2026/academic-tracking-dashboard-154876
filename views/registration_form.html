@@ -10,30 +10,38 @@
         <div class="Title">
             <h2>Registration Form</h2>
         </div>
-        <div class="reg-form" id="reg-form">
-            <form action="" method="post">
-                <div class="Form-card">
+        <div class="reg-form" >
+            <form action="" method="post" id="reg-form">
+                <div class="Form-card" >
                     <label for="name">Name:</label>
-                    <input type="text"> 
+                    <input type="text" id="Name"> 
                 </div>
                 <div class="Form-card">
                     <label for="name">Email:</label>
-                    <input type="text"> 
+                    <input type="text" id="Email"> 
                 </div>
                 <div class="Form-card">
                     <label for="name">Password:</label>
-                    <input type="password"> 
+                    <input type="password" id="Password"> 
                 </div>
                 <div class="Form-card">
                     <label for="name">Confirm Password:</label>
-                    <input type="password"> 
+                    <input type="password" id="ConfirmPassword"> 
                 </div>
+                <div class="Form-card">
+                    <label for="name">Role:</label>
+                    <select name="role" id="role">
+                        <option value="student">Student</option>
+                        <option value="teacher">Teacher</option>
+                    </select>
+                </div>    
                 <div class="action-btn">
                     <button type="submit">Register</button>
                 </div>
             </form>
             
         </div>
+        <script src="/register.js"></script>
     </div>
     
 </body>

@@ -7,7 +7,7 @@ document.getElementById("reg-form").addEventListener("submit",async function(eve
     const confirmPassword = document.getElementById("ConfirmPassword").value;
     const role = document.getElementById("role").value;
    
-    if (!name||!email||!password||!confirmPassword||!role==""){
+    if (!name||!email||!password||!confirmPassword||!role){
         alert("Please fill all the fields");
         return;        
     }
@@ -26,7 +26,7 @@ document.getElementById("reg-form").addEventListener("submit",async function(eve
             body: JSON.stringify(payload)
         });
         const message = await response.json();
-        alert(message);
+        alert(message.message);
     } 
     catch(error){
         alert("Error:"+error);
@@ -34,7 +34,7 @@ document.getElementById("reg-form").addEventListener("submit",async function(eve
 
 });
 
-document.getElementById('log-form').addEventListener('sumbit',async function(event){
+/*document.getElementById('log-form').addEventListener('sumbit',async function(event){
     event.preventDefault();
 
     const username = document.getElementById("username").value;
@@ -60,6 +60,7 @@ document.getElementById('log-form').addEventListener('sumbit',async function(eve
         alert('Error:'+error);
     }
 });
+*/
 
 
 
