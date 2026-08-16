@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AcademicTrack | Lecturer</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand"><div class="brand-mark">AT</div><div>Academic<span>Track</span></div></div>
+      <div class="profile-mini"><div class="avatar">DS</div><div><strong>Dr. Sarah Mwangi</strong><small>Lecturer · ICT Department</small></div></div>
+      <nav>
+        <a class="active" href="lecturer.html">▦ <span>Dashboard</span></a>
+        <a href="#students"><span>Students & Grades</span></a>
+        <a href="#analytics"><span>Course Analytics</span></a>
+      </nav>
+      <div class="sidebar-bottom"><a href="index.html">↪ <span>Switch Dashboard</span></a></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div><button class="mobile-menu" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰</button><span class="crumb">Lecturer / Dashboard</span></div>
+        <div class="top-user"><span class="notification"></span><div class="avatar small">DS</div><span>Dr. Sarah</span></div>
+      </header>
+
+      <section class="content">
+        <div class="welcome">
+          <div><p class="eyebrow">LECTURER PORTAL</p><h1>Good evening, Dr. Sarah </h1><p>Manage student grades and monitor course performance.</p></div>
+          <div class="semester"><span>Academic Year</span><strong>2026 / 2027</strong></div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card"><div class="stat-icon blue">C</div><div><span>My Courses</span><strong id="lecturerCourses">0</strong><small>Courses this semester</small></div></div>
+          <div class="stat-card"><div class="stat-icon green">S</div><div><span>Total Students</span><strong id="studentCount">0</strong><small>Across my courses</small></div></div>
+          <div class="stat-card"><div class="stat-icon purple">%</div><div><span>Average Mark</span><strong id="lecturerAverage">0%</strong><small>All course records</small></div></div>
+          <div class="stat-card"><div class="stat-icon orange">✓</div><div><span>Pass Rate</span><strong id="passRate">0%</strong><small>Students scoring ≥ 50</small></div></div>
+        </div>
+
+        <div class="section-heading" id="students">
+          <div><h2>Grade Management</h2><p>Select a course and update student marks.</p></div>
+          <div class="select-wrap"><label for="courseSelect">Course</label><select id="courseSelect"></select></div>
+        </div>
+
+        <div class="table-card">
+          <div class="table-header"><div><strong id="selectedCourseTitle">Course</strong><span id="selectedCourseSubtitle">Student grades</span></div><button class="primary-btn" onclick="saveGrades()">Save Grades</button></div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>#</th><th>Student ID</th><th>Student Name</th><th>Marks / 100</th><th>Grade</th><th>Status</th></tr></thead>
+              <tbody id="gradeTable"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="bottom-grid" id="analytics">
+          <div class="panel">
+            <div class="panel-title"><div><h2>Course Performance</h2><p>Automatically calculated statistics</p></div></div>
+            <div class="course-stat-cards">
+              <div><span>Class Average</span><strong id="classAverage">0%</strong></div>
+              <div><span>Highest</span><strong id="classHighest">0%</strong></div>
+              <div><span>Lowest</span><strong id="classLowest">0%</strong></div>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="panel-title"><div><h2>Grade Distribution</h2><p>Selected course</p></div></div>
+            <div id="distribution" class="distribution"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="js/data.js"></script>
+  <script src="js/lecturer.js"></script>
+</body>
+</html>

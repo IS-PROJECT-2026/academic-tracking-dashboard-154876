@@ -47,4 +47,5 @@ function DisplayStudent() {
   `).join("");
 }
 
+
 DisplayStudent();
