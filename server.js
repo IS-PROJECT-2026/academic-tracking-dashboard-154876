@@ -4,7 +4,7 @@ const path = require('path');
 const bcrypt = require('bcrypt');
 const db = require('./db.js');
 
-const SALT_ROUNDS = 12;
+const SALT_ROUNDS = 16;
 const VIEWS_DIR = path.join(__dirname, 'views');
 
 console.log('Views directory:', VIEWS_DIR);
