@@ -6,7 +6,7 @@ const pool = new Pool({
   user: 'ISProject',
   host: 'localhost',
   database: 'AMSPlatform',
-  password: '1234Bravin',
+  password: '',
   port: 5432, 
 });
 
