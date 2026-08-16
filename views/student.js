@@ -1,4 +1,4 @@
-function ChangeStudent() {
+function DisplayStudent() {
   const courses = studentData.courses;
   let weightedPoints = 0;
   let totalCredits = 0;
@@ -47,4 +47,5 @@ function ChangeStudent() {
   `).join("");
 }
 
-ChangeStudent();
+
+DisplayStudent();
